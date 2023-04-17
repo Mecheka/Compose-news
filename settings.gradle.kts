@@ -1,8 +1,8 @@
 @file:Suppress("UnstableApiUsage")
 
-rootProject.name = "ComposeNews"
-include(":app")
+include(":app", ":data")
 
+rootProject.name = "ComposeNews"
 
 pluginManagement {
     repositories {
@@ -29,6 +29,7 @@ dependencyResolutionManagement {
             version("constraintlayout", "2.1.4")
             version("hilt", "2.44")
             version("material", "1.8.0")
+            version("retrofit", "2.9.0")
 
             plugin("androidApplication", "com.android.application").versionRef("gradle")
             plugin("androidLib", "com.android.library").versionRef("gradle")
@@ -54,8 +55,12 @@ dependencyResolutionManagement {
             library("hiltAndroid", "com.google.dagger", "hilt-android").versionRef("hilt")
             library("hiltCompiler", "com.google.dagger", "hilt-android-compiler").versionRef("hilt")
 
-            library("retrofit", "com.squareup.retrofit2", "retrofit").version("2.9.0")
-            library("moshi", "com.squareup.retrofit2", "converter-moshi").version("1.14.0")
+            library("retrofit", "com.squareup.retrofit2", "retrofit").versionRef("retrofit")
+            library("retrofitGson", "com.squareup.retrofit2", "converter-gson").versionRef("retrofit")
+            library("gson", "com.google.code.gson", "gson").version("2.10.1")
+
+            bundle("retrofit", listOf("retrofit", "retrofitGson", "gson"))
+
         }
     }
 }
