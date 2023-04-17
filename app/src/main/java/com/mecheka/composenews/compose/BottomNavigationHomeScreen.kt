@@ -10,7 +10,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.mecheka.composenews.compose.theme.deepPurple
+import com.mecheka.core.compose.theme.deepPurple
 
 @SuppressLint("UnrememberedMutableState")
 @Composable

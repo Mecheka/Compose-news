@@ -1,4 +1,4 @@
-package com.mecheka.composenews.compose.theme
+package com.mecheka.core.compose.theme
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors

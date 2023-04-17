@@ -1,6 +1,12 @@
 @file:Suppress("UnstableApiUsage")
 
-include(":app", ":data")
+include(":core")
+
+
+include()
+
+
+include(":app", ":data", ":features:general")
 
 rootProject.name = "ComposeNews"
 
@@ -30,6 +36,7 @@ dependencyResolutionManagement {
             version("hilt", "2.44")
             version("material", "1.8.0")
             version("retrofit", "2.9.0")
+            version("lifecycle", "2.6.1")
 
             plugin("androidApplication", "com.android.application").versionRef("gradle")
             plugin("androidLib", "com.android.library").versionRef("gradle")
@@ -39,7 +46,7 @@ dependencyResolutionManagement {
             library("coreKtx", "androidx.core", "core-ktx").versionRef("coreKtx")
             library("appCompat", "androidx.appcompat", "appcompat").versionRef("appcompat")
             library("material", "com.google.android.material", "material").versionRef("material")
-            library("constraintLayout", "androidx.constraintlayout", "constraintlayout").versionRef("constraintlayout")
+            library("lifecycleCompose", "androidx.lifecycle", "lifecycle-viewmodel-compose").versionRef("lifecycle")
 
             library("composeBom", "androidx.compose", "compose-bom").versionRef("composeBom")
             library("composeMaterial", "androidx.compose.material", "material").withoutVersion()
@@ -54,6 +61,7 @@ dependencyResolutionManagement {
 
             library("hiltAndroid", "com.google.dagger", "hilt-android").versionRef("hilt")
             library("hiltCompiler", "com.google.dagger", "hilt-android-compiler").versionRef("hilt")
+            library("hiltCompose", "androidx.hilt", "hilt-navigation-compose").version("1.0.0")
 
             library("retrofit", "com.squareup.retrofit2", "retrofit").versionRef("retrofit")
             library("retrofitGson", "com.squareup.retrofit2", "converter-gson").versionRef("retrofit")

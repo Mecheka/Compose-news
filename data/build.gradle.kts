@@ -50,3 +50,7 @@ dependencies {
 
     implementation(libs.bundles.retrofit)
 }
+
+kapt {
+    correctErrorTypes = true
+}
