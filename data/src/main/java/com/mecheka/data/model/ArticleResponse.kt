@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class ArticleResponse(
     @SerializedName("author")
-    val author: String,
+    val author: String? = null,
     @SerializedName("content")
     val content: String,
     @SerializedName("description")
@@ -15,7 +15,7 @@ data class ArticleResponse(
     @SerializedName("source")
     val sourceResponse: SourceResponse,
     @SerializedName("title")
-    val title: String,
+    val title: String? = null,
     @SerializedName("url")
     val url: String,
     @SerializedName("urlToImage")

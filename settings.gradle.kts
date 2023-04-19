@@ -28,6 +28,7 @@ dependencyResolutionManagement {
             version("kotlin", "1.8.10")
             version("gradle", "8.0.0")
             version("appcompat", "1.6.1")
+            version("coil", "2.3.0")
             version("compose", "1.4.2")
             version("composeBom", "2023.03.00")
             version("composeNavigation", "2.5.3")
@@ -56,6 +57,7 @@ dependencyResolutionManagement {
             library("composeTool", "androidx.compose.ui", "ui-tooling").withoutVersion()
             library("composeActivity", "androidx.activity", "activity-compose").version("1.6.1")
             library("composeNavigation", "androidx.navigation", "navigation-compose").versionRef("composeNavigation")
+            library("coil", "io.coil-kt", "coil-compose").versionRef("coil")
 
             bundle("compose", listOf("composeMaterial", "composeFoundation", "composeUi", "composePreview", "composeActivity", "composeNavigation"))
 
