@@ -1,12 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
-include(":core")
-
-
-include()
-
-
-include(":app", ":data", ":features:general")
+include(":app", ":data", ":core", ":features:general")
 
 rootProject.name = "ComposeNews"
 
