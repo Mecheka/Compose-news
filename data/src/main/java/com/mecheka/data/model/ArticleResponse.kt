@@ -19,5 +19,5 @@ data class ArticleResponse(
     @SerializedName("url")
     val url: String,
     @SerializedName("urlToImage")
-    val urlToImage: String,
+    val urlToImage: String?=null,
 )

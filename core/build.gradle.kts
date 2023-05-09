@@ -48,4 +48,5 @@ dependencies {
     implementation(platform(libs.composeBom))
     implementation(libs.bundles.compose)
     debugImplementation(libs.composeTool)
+    implementation(libs.coil)
 }

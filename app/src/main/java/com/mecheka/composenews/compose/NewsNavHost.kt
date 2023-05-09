@@ -5,16 +5,17 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.mecheka.features.general.GeneralScreen
+import com.mecheka.feature.business.BusinessScreenCompose
+import com.mecheka.feature.general.GeneralScreenCompose
 
 @Composable
 fun NewsNavHost(navController: NavHostController, modifier: Modifier = Modifier) {
     NavHost(navController = navController, startDestination = General.route, modifier = modifier) {
         composable(General.route) {
-            GeneralScreen()
+            GeneralScreenCompose()
         }
         composable(Business.route) {
-            BusinessScreen()
+            BusinessScreenCompose()
         }
         composable(Tech.route) {
             TechScreen()

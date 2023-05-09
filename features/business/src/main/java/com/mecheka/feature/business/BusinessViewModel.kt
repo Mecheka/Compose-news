@@ -1,6 +1,5 @@
-package com.mecheka.features.general
+package com.mecheka.feature.business
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.mecheka.data.repository.NewsRepository
@@ -14,9 +13,9 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class GeneralViewModel @Inject constructor(private val repository: NewsRepository) : ViewModel() {
+class BusinessViewModel @Inject constructor(private val repository: NewsRepository) : ViewModel() {
 
-    private val _viewState = MutableStateFlow<GeneralScreenState>(Loading)
+    private val _viewState = MutableStateFlow<BusinessScreenState>(Loading)
     val viewState = _viewState.asStateFlow()
 
     init {
@@ -25,9 +24,8 @@ class GeneralViewModel @Inject constructor(private val repository: NewsRepositor
 
     private fun loadData() {
         viewModelScope.launch {
-            repository.getTopHeadlinesByCategory("general")
+            repository.getTopHeadlinesByCategory("business")
                 .catch {
-                    Log.e("GeneralViewModel", it.message.orEmpty())
                     _viewState.value = Error
                 }.flowOn(Dispatchers.IO)
                 .collect {

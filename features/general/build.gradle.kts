@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "com.mecheka.features.general"
+    namespace = "com.mecheka.feature.general"
     compileSdk = 33
 
     defaultConfig {
@@ -53,7 +53,6 @@ dependencies {
     implementation(platform(libs.composeBom))
     implementation(libs.bundles.compose)
     debugImplementation(libs.composeTool)
-    implementation(libs.coil)
 
     implementation(libs.hiltAndroid)
     implementation(libs.hiltCompose)
